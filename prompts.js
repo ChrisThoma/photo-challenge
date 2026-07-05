@@ -71,8 +71,8 @@ const PROMPTS = [
   },
   {
     id: 12,
-    title: "Familiar Place, New Angle",
-    description: "A spot you all know, shot from an angle you've never used.",
+    title: "Two Angles, One Subject",
+    description: "Two pictures of the same thing, shot from two different angles.",
     posts: [],
   },
   {
