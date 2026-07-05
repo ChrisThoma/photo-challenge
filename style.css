@@ -1,0 +1,181 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --text: #111111;
+  --muted: #555555;
+  --border: #e5e5e5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101010;
+    --surface: #1a1a1a;
+    --text: #f2f2f2;
+    --muted: #9c9c9c;
+    --border: #2c2c2c;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+.wordmark,
+.tile-number {
+  font-family: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Top bar */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wordmark {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.progress {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hero */
+.hero {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 3rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+/* Prompt sections */
+.masonry {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+}
+
+.tile {
+  margin-bottom: 3.5rem;
+}
+
+/* Entrance animation (skipped under prefers-reduced-motion) */
+.tile.will-enter {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.tile.will-enter.in-view {
+  opacity: 1;
+  transform: none;
+  transition: opacity 450ms ease, transform 450ms ease,
+    box-shadow 250ms ease, border-color 250ms ease;
+}
+
+.tile-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0 0 0.85rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.25rem;
+}
+
+.tile-number {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+}
+
+.tile-meta h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* Posts: fit as many across as possible, wrap to the next line */
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.post-cell {
+  /* 540px is Instagram's own max embed width */
+  flex: 1 1 330px;
+  min-width: 280px;
+  max-width: min(540px, 100%);
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border: 1px dashed var(--border);
+  border-radius: 4px;
+  padding: 2.25rem 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.placeholder svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0.6;
+}
+
+.post-cell iframe,
+.post-cell .instagram-media {
+  max-width: 100% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
