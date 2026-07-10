@@ -13,7 +13,7 @@ const PROMPTS = [
     id: 2,
     title: "Reflections",
     description: "A reflection in water, glass, a puddle, or metal.",
-    posts: [],
+    posts: ["https://www.instagram.com/p/DamHfZvsuJc/"],
   },
   {
     id: 3,
