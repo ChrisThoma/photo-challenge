@@ -179,3 +179,11 @@ h2,
   min-width: 0 !important;
   margin: 0 !important;
 }
+
+.post-cell img.local-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}

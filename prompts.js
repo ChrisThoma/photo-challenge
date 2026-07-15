@@ -1,7 +1,7 @@
 // Edit this list any time to change, reorder, add, or remove prompts.
-// After posting a photo to Instagram, add that post's URL to the prompt's
-// `posts` array — any number of people, in any order, e.g.:
-//   posts: ["https://www.instagram.com/p/ABC123/"],
+// Each entry in a prompt's `posts` array is either an Instagram post URL or
+// a repo-relative image path — any number of people, in any order, e.g.:
+//   posts: ["https://www.instagram.com/p/ABC123/", "images/03_shadowplay.jpg"],
 const PROMPTS = [
   {
     id: 1,
@@ -19,7 +19,7 @@ const PROMPTS = [
     id: 3,
     title: "Shadow Play",
     description: "A shadow that's more interesting than the object casting it.",
-    posts: [],
+    posts: ["images/03_shadowplay.jpg"],
   },
   {
     id: 4,

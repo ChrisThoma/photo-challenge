@@ -2,7 +2,7 @@ function buildPostCell(url) {
   const cell = document.createElement("div");
   cell.className = "post-cell";
 
-  if (url) {
+  if (url && url.includes("instagram.com")) {
     const blockquote = document.createElement("blockquote");
     blockquote.className = "instagram-media";
     blockquote.setAttribute("data-instgrm-captioned", "");
@@ -11,6 +11,13 @@ function buildPostCell(url) {
     link.href = url;
     blockquote.appendChild(link);
     cell.appendChild(blockquote);
+  } else if (url) {
+    const img = document.createElement("img");
+    img.className = "local-photo";
+    img.src = url;
+    img.loading = "lazy";
+    img.alt = "Challenge photo";
+    cell.appendChild(img);
   } else {
     const placeholder = document.createElement("div");
     placeholder.className = "placeholder";
