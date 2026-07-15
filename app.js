@@ -9,13 +9,15 @@ function buildPostCell(url) {
     blockquote.setAttribute("data-instgrm-permalink", url);
     const link = document.createElement("a");
     link.href = url;
+    // Visible fallback if embed.js is blocked or fails to load;
+    // embed.js replaces the whole blockquote when it runs.
+    link.textContent = "View this post on Instagram";
     blockquote.appendChild(link);
     cell.appendChild(blockquote);
   } else if (url) {
     const img = document.createElement("img");
     img.className = "local-photo";
     img.src = url;
-    img.loading = "lazy";
     img.alt = "Challenge photo";
     cell.appendChild(img);
   } else {
@@ -95,7 +97,7 @@ function observeEntrances() {
   });
 }
 
-function processInstagramEmbeds(attemptsLeft = 25) {
+function processInstagramEmbeds(attemptsLeft = 50) {
   if (window.instgrm) {
     window.instgrm.Embeds.process();
   } else if (attemptsLeft > 0) {

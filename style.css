@@ -97,14 +97,11 @@ h2,
 /* Entrance animation (skipped under prefers-reduced-motion) */
 .tile.will-enter {
   opacity: 0;
-  transform: translateY(16px);
 }
 
 .tile.will-enter.in-view {
   opacity: 1;
-  transform: none;
-  transition: opacity 450ms ease, transform 450ms ease,
-    box-shadow 250ms ease, border-color 250ms ease;
+  transition: opacity 450ms ease;
 }
 
 .tile-meta {
