@@ -43,7 +43,7 @@ const PROMPTS = [
     id: 7,
     title: "Macro Details",
     description: "Get close enough to reveal texture invisible from afar.",
-    posts: [],
+    posts: ["images/7_macro_details.jpg"],
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const PROMPTS = [
     id: 10,
     title: "Texture Study",
     description: "A surface whose texture is the whole point of the shot.",
-    posts: [],
+    posts: ["images/1_texture_study.jpg"],
   },
   {
     id: 11,
@@ -91,6 +91,6 @@ const PROMPTS = [
     id: 15,
     title: "Self-Portrait, No Face",
     description: "A self-portrait where your face isn't the focus.",
-    posts: [],
+    posts: ["images/15_self_portrait.jpg"],
   },
 ];
