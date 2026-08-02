@@ -31,7 +31,7 @@ const PROMPTS = [
     id: 5,
     title: "Candid Life",
     description: "Someone (or something) caught mid-action, unposed.",
-    posts: [],
+    posts: ["https://www.instagram.com/p/DbjCHikR1lg/"],
   },
   {
     id: 6,
@@ -49,7 +49,7 @@ const PROMPTS = [
     id: 8,
     title: "Leading Lines",
     description: "Lines that pull the eye toward a subject.",
-    posts: [],
+    posts: ["https://www.instagram.com/p/DbjBzCsBGmn/"],
   },
   {
     id: 9,
