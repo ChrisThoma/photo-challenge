@@ -25,7 +25,7 @@ const PROMPTS = [
     id: 4,
     title: "One Color, Everywhere",
     description: "Pick a color and find it dominating a scene.",
-    posts: [],
+    posts: ["https://www.instagram.com/p/DbjNOa1PRQT/"],
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const PROMPTS = [
     id: 9,
     title: "Framed",
     description: "Shoot your subject through a window, doorway, or natural frame.",
-    posts: [],
+    posts: ["https://www.instagram.com/p/DbjNZ76P8_d/"],
   },
   {
     id: 10,
