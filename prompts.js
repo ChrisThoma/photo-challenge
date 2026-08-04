@@ -43,7 +43,7 @@ const PROMPTS = [
     id: 7,
     title: "Macro Details",
     description: "Get close enough to reveal texture invisible from afar.",
-    posts: ["images/7_macro_details.jpg"],
+    posts: ["images/7_macro_details.jpg", "https://www.instagram.com/p/DboVAp_vB36"],
   },
   {
     id: 8,
